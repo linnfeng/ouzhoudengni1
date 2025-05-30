@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌍《我在欧洲等你》｜13天法意瑞定制小团慢旅行</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 固定导航栏 -->
+    <nav class="fixed-nav">
+        <div class="nav-logo">🌍 我在欧洲等你</div>
+        <div class="nav-cities">
+            <span class="city-nav" data-city="0"><i class="fas fa-home"></i> 首页</span>
+            <span class="city-nav" data-city="1"><i class="fas fa-landmark"></i> 罗马</span>
+            <span class="city-nav" data-city="2"><i class="fas fa-mountain"></i> 托斯卡纳</span>
+            <span class="city-nav" data-city="3"><i class="fas fa-church"></i> 佛罗伦萨</span>
+            <span class="city-nav" data-city="4"><i class="fas fa-water"></i> 威尼斯</span>
+            <span class="city-nav" data-city="5"><i class="fas fa-building"></i> 米兰</span>
+            <span class="city-nav" data-city="6"><i class="fas fa-bridge"></i> 卢塞恩</span>
+            <span class="city-nav" data-city="7"><i class="fas fa-snowflake"></i> 少女峰</span>
+            <span class="city-nav" data-city="8"><i class="fas fa-leaf"></i> 米伦</span>
+            <span class="city-nav" data-city="9"><i class="fas fa-castle"></i> 日内瓦</span>
+            <span class="city-nav" data-city="10"><i class="fas fa-tower"></i> 巴黎</span>
+            <span class="city-nav" data-city="11"><i class="fas fa-heart"></i> 总结</span>
+        </div>
+        <button class="sound-toggle" id="soundToggle">
+            <i class="fas fa-volume-up"></i>
+        </button>
+    </nav>
+
+    <!-- 封面页 -->
+    <section class="hero-section" id="hero">
+        <div class="hero-background">
+            <div class="hero-image" style="background-image: url('https://pics0.baidu.com/feed/0b55b319ebc4b7451af1f74404a47a198b8215e5.jpeg@f_auto?token=af6084703f3766eacc359adc862537b7')"></div>
+            <div class="hero-overlay"></div>
+            <div class="floating-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">🌍《我在欧洲等你》</h1>
+            <p class="hero-subtitle">13天法意瑞定制小团慢旅行</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">个国家</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10</span>
+                    <span class="stat-label">座城市</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">13</span>
+                    <span class="stat-label">天旅程</span>
+                </div>
+            </div>
+            <button class="cta-button" onclick="startJourney()">开始旅程</button>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- 翻页书本容器 -->
+    <section class="book-section" id="book">
+        <div class="book-container">
+            <div class="book" id="flipBook">
+                
+                <!-- 第一页：罗马 -->
+                <div class="page" data-city="rome">
+                    <div class="page-background" style="background-image: url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2726&q=80')"></div>
+                    <div class="page-content">
+                        <div class="city-header">
+                            <h2>🏛《我在罗马等你》</h2>
+                            <div class="city-info">
+                                <span class="coordinates">41.9028°N, 12.4964°E</span>
+                                <span class="elevation">海拔 21m</span>
+                            </div>
+                        </div>
+                        <div class="city-text">
+                            <p>住进电影里的老城区，梵蒂冈就在转角处</p>
+                            <p>在罗马的第一晚，我们住进了这家让我念念不忘的酒店。不是因为多么奢华，而是那种"电影感"太强烈了。</p>
+                            <p>打开窗户就是鹅黄色的老建筑和狭窄街巷，清晨的钟声从梵蒂冈那边飘来，空气中混着烘焙的香气，一下就让人沉进了"罗马假日"的世界。</p>
+                            <p>这次我们的小团特别安排住在市中心，走路就能到梵蒂冈、古罗马广场和西班牙台阶，哪怕只是随便走走，也总有惊喜。最妙的是，白天打卡完经典景点，晚上还能自己慢慢闲逛，不用赶行程、不用坐大巴。</p>
+                            <p>我最喜欢的一刻，是黄昏回酒店路上，在许愿池边吃了一个草莓味的Gelato，看着天色一点点从金黄变成蓝灰。那一刻，真的感觉自己"活在罗马"。</p>
+                            <p>下一站是托斯卡纳，听说那边的田园和小镇会更治愈</p>
+                        </div>
+                        <button class="sound-btn" data-sound="rome">
+                            <i class="fas fa-play"></i> 听罗马钟声
+                        </button>
+                        <button class="page-nav-arrow next-on-page" onclick="nextPage()"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- 第二页：托斯卡纳 -->
+                <div class="page" data-city="tuscany">
+                    <div class="page-background" style="background-image: url('https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+                    <div class="page-content">
+                        <button class="page-nav-arrow prev-on-page" onclick="prevPage()"><i class="fas fa-chevron-left"></i></button>
+                        <div class="city-header">
+                            <h2>🌾《我在托斯卡纳等你》</h2>
+                            <div class="city-info">
+                                <span class="coordinates">43.7711°N, 11.2486°E</span>
+                                <span class="elevation">海拔 263m</span>
+                            </div>
+                        </div>
+                        <div class="city-text">
+                            <p>风吹麦田的时候，一切都刚刚好</p>
+                            <p>托斯卡纳的山谷真的很美，美到不太像现实里的风景。</p>
+                            <p>那天一早，我们从罗马出发，开车三个小时一路向北，窗外从石墙屋顶变成一整片柔软的绿色。第一站是那座常出现在明信片上的"小耳朵教堂"，安静地立在山坡上，周围一圈高大的丝柏树，像童话里才会出现的场景。</p>
+                            <p>我们特地准备了水果和气泡水，停在一个农场旁，坐在田间的长椅上吃了个露天早午餐。风吹过来的时候，麦田像起伏的海浪，谁都不说话，就静静坐着发呆，是真的很放松。</p>
+                            <p>之后去了皮恩扎小镇，一个建在山上的小石头镇，巷子里全是手工陶瓷和奶酪香味。我在城墙上走了一圈，从那儿望出去，整个奥尔恰山谷尽收眼底——层层叠叠的丘陵、点缀着葡萄园和橄榄树的乡村公路，随手拍都是桌面级。</p>
+                            <p>最巧的是，那天傍晚我们赶上了日落，一路上谁都不想说话，就让音乐放着，看着天慢慢从金橙变成紫蓝。</p>
+                            <p>这就是小团的美好吧，不用赶路，不用打卡，每个人都能找到自己的节奏。</p>
+                            <p>下一站，我们去佛罗伦萨。我想在那里认真走一走文艺复兴留下的足迹。</p>
+                        </div>
+                        <button class="sound-btn" data-sound="tuscany">
+                            <i class="fas fa-play"></i> 听麦田风声
+                        </button>
+                        <button class="page-nav-arrow next-on-page" onclick="nextPage()"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- 第三页：佛罗伦萨 -->
+                <div class="page" data-city="florence">
+                    <div class="page-background" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+                    <div class="page-content">
+                        <button class="page-nav-arrow prev-on-page" onclick="prevPage()"><i class="fas fa-chevron-left"></i></button>
+                        <div class="city-header">
+                            <h2>🎨《我在佛罗伦萨等你》</h2>
+                            <div class="city-info">
+                                <span class="coordinates">43.7696°N, 11.2558°E</span>
+                                <span class="elevation">海拔 50m</span>
+                            </div>
+                        </div>
+                        <div class="city-text">
+                            <p>一座城教我学会仰望</p>
+                            <p>走进佛罗伦萨的第一感觉，是人慢了下来，眼睛却停不住。</p>
+                            <p>从圣母百花大教堂门口抬头那一刻开始，仰望就成了这座城市的打开方式：高耸的钟楼、穹顶的光影，还有墙角那些被风化的雕像，都像在轻声讲故事。</p>
+                            <p>我们特地留了一整个上午，爬上乔托钟楼——四百多级台阶，全程靠双腿。但真的值。站在顶端俯瞰整座城，红瓦屋顶铺满山谷，远处是起伏的托斯卡纳丘陵，一切都沉静又辽阔。</p>
+                            <p>下午我们在市政广场小坐，买了冰淇淋随便吃点什么，周围都是像我一样发呆的人。这里的节奏，不是"逛景点"，而是"走进时间"。</p>
+                            <p>最浪漫的时刻，是晚上上到米开朗琪罗广场。那是佛罗伦萨的制高点，也是看夕阳的最佳机位。我们提前半小时到，坐在台阶上等光落下去——整座城市一点点被染成玫瑰金，钟声响起的那一刻，真的有种"我活在画里"的恍惚。</p>
+                            <p>小团的好处就是，我们可以为一个日落，专门空出两个小时。可以在街角书店里翻一本旧画册，不赶时间，也没人催促。</p>
+                            <p>下一站，是水上的威尼斯。期待告诉你，在贡多拉上的感觉。</p>
+                        </div>
+                        <button class="sound-btn" data-sound="florence">
+                            <i class="fas fa-play"></i> 听教堂钟声
+                        </button>
+                        <button class="page-nav-arrow next-on-page" onclick="nextPage()"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- 第四页：威尼斯 -->
+                <div class="page" data-city="venice">
+                    <div class="page-background" style="background-image: url('https://images.unsplash.com/photo-1514890547357-a9ee288728e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+                    <div class="page-content">
+                        <button class="page-nav-arrow prev-on-page" onclick="prevPage()"><i class="fas fa-chevron-left"></i></button>
+                        <div class="city-header">
+                            <h2>🛶《我在威尼斯等你》</h2>
+                            <div class="city-info">
+                                <span class="coordinates">45.4408°N, 12.3155°E</span>
+                                <span class="elevation">海拔 1m</span>
+                            </div>
+                        </div>
+                        <div class="city-text">
+                            <p>穿过水巷，时间就不着急了</p>
+                            <p>威尼斯真的不是一个"看"的地方，而是一个要"沉进去"的城市。</p>
+                            <p>我们这次从大陆坐船进岛，一下船，风一吹，整个人就软了。没有车声、没有喇叭，只有水声、脚步声，还有小巷尽头偶尔传来的手风琴。</p>
+                            <p>小团行程安排得很松，下午就是一场city walk。从赤足桥走到圣马可广场，穿梭在石板路和水巷之间，像在看一场会流动的电影。导游边走边讲故事，我们边走边"迷路"，那种"找不到方向"反而成了这里最有趣的体验。</p>
+                            <p>最特别的是贡多拉的30分钟，我们6个人坐一船，划桨的船夫一边唱着意大利民谣，一边带我们穿过低低的拱桥，阳光正好，水面映着倒影，城市仿佛是从水中长出来的。大家都不说话，只听水声划开，又缓缓合上。</p>
+                            <p>快到傍晚的时候，我们在广场边坐下喝了点东西，远处是夕阳照亮的总督府，鸽子围着喷泉转圈圈。我那一刻突然懂了，为什么这么多人来这里拍婚纱照——这城市真的让人想谈恋爱。</p>
+                            <p>威尼斯就像是旅途中一场"停顿"。不用计划太多，也不用赶太快。它让人安静下来，去感受身边正在发生的浪漫。</p>
+                            <p>下一站是米兰，我们要去登顶那座等了五百年才建成的教堂。到时候再写给你看。</p>
+                        </div>
+                        <button class="sound-btn" data-sound="venice">
+                            <i class="fas fa-play"></i> 听水声
+                        </button>
+                        <button class="page-nav-arrow next-on-page" onclick="nextPage()"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- 第五页：米兰 -->
+                <div class="page" data-city="milan">
+                    <div class="page-background" style="background-image: url('https://images.unsplash.com/photo-1513581166391-887a96ddeafd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80')"></div>
+                    <div class="page-content">
+                        <button class="page-nav-arrow prev-on-page" onclick="prevPage()"><i class="fas fa-chevron-left"></i></button>
+                        <div class="city-header">
+                            <h2>🏛《我在米兰等你》</h2>
+                            <div class="city-info">
+                                <span class="coordinates">45.4642°N, 9.1900°E</span>
+                                <span class="elevation">海拔 120m</span>
+                            </div>
+                        </div>
+                        <div class="city-text">
+                            <p>在哥特尖顶下喝杯咖啡，刚刚好</p>
+                            <p>旅行第六天，我们从威尼斯一路向西，进入了意大利最有气场的一座城市：米兰。</p>
+                            <p>很多人来米兰是为了买买买，而我最爱的，却是那一刻——站在米兰大教堂的屋顶，看阳光洒满整个城市。</p>
+                            <p>我们这次的小团安排了电梯直达登顶，省去了绕塔旋转的台阶疲惫。站在哥特式尖顶之间仰望，那些石雕、飞拱、柱头，精致得让人屏住呼吸。米兰有点像巴黎，但不炫耀；她安静、克制、有分寸。你不小心就会喜欢上。</p>
+                            <p>下了塔，我们去了艾曼纽二世回廊——那座被称为"米兰客厅"的购物长廊。穹顶是玻璃马赛克，地面是星座花纹，阳光穿过顶部玻璃洒在身上，一瞬间觉得"生活在这里也不错"。</p>
+                            <p>我们小团成员几个人没有马上冲进店里，而是在回廊边的小咖啡馆坐下，点了几杯卡布奇诺和提拉米苏。周围是穿着得体的米兰人，步伐很快，但表情很松。你能感受到：这是一个会生活的城市。</p>
+                            <p>这也是我喜欢小团的原因——不是每一站都要轰轰烈烈地打卡，有时候，一杯咖啡、一顿自由午餐、一个城市角落的停留，就足够了。</p>
+                            <p>下一站，是穿越国境的湖光山色。我们要进瑞士了，坐上金色山口列车，正式进入童话段落。</p>
+                        </div>
+                        <button class="sound-btn" data-sound="milan">
+                            <i class="fas fa-play"></i> 听咖啡馆音乐
+                        </button>
+                        <button class="page-nav-arrow next-on-page" onclick="nextPage()"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- 第六页：卢塞恩 -->
+                <div class="page" data-city="lucerne">
+                    <div class="page-background" style="background-image: url('https://images.unsplash.com/photo-1527838832700-5059252407fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2126&q=80')"></div>
+                    <div class="page-content">
+                        <button class="page-nav-arrow prev-on-page" onclick="prevPage()"><i class="fas fa-chevron-left"></i></button>
+                        <div class="city-header">
+                            <h2>🌉《我在卢塞恩等你》</h2>
+                            <div class="city-info">
+                                <span class="coordinates">47.0502°N, 8.3093°E</span>
+                                <span class="elevation">海拔 436m</span>
+                            </div>
+                        </div>
+                        <div class="city-text">
+                            <p>一座木桥，一面湖水，时间刚刚好</p>
+                            <p>进入瑞士的第一站，是卢塞恩。</p>
+                            <p>火车缓缓驶进小镇时，窗外是连绵的山、透蓝的湖，还有天边刚洗过一样的云。我们在车站下车，走几步就是卡贝尔桥——那座建于14世纪、铺着木瓦的老桥静静横在水面上，桥身倒映在湖中，像把时间折起来了一样。</p>
+                            <p>我们特地慢慢地走。桥上的画，每一幅都记录着这座小镇的历史与信仰。而桥下，是天鹅安静地游过。这里和你想象中的瑞士，一模一样：干净、安静、像童话。</p>
+                            <p>小团的好，就是可以不用赶路。我们几个人在湖边坐了一会儿，喝了杯热可可，看远处的雪山和教堂尖顶交错在一起，像一张会呼吸的明信片。有人开始拍照，有人开始发呆。没人说话，但都在享受着一件事——什么都不用做。</p>
+                            <p>午餐我们选在火车站边的街口小店，点了份热乎的鸡肉卷和番茄汤。旅伴说这是她这趟最满足的一顿饭。我想，是因为我们终于慢下来了。</p>
+                            <p>吃完，我们就搭上金色山口列车，穿过湖光山色，驶向下一站的山谷与雪峰。那趟列车上的风景，我想用下一篇来写。</p>
+                            <p>但卢塞恩会让我记得很久。不是因为这里有多壮观，而是它太刚好。</p>
+                        </div>
+                        <button class="sound-btn" data-sound="lucerne">
+                            <i class="fas fa-play"></i> 听湖水声
+                        </button>
+                        <button class="page-nav-arrow next-on-page" onclick="nextPage()"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- 第七页：少女峰 -->
+                <div class="page" data-city="jungfrau">
+                    <div class="page-background" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+                    <div class="page-content">
+                        <button class="page-nav-arrow prev-on-page" onclick="prevPage()"><i class="fas fa-chevron-left"></i></button>
+                        <div class="city-header">
+                            <h2>❄️《我在少女峰等你》</h2>
+                            <div class="city-info">
+                                <span class="coordinates">46.5369°N, 7.9625°E</span>
+                                <span class="elevation">海拔 3454m</span>
+                            </div>
+                        </div>
+                        <div class="city-text">
+                            <p>雪山之上，是风与光的声音</p>
+                            <p>从卢塞恩出发，我们一路向山而行。搭上金色山口列车，穿过布里恩茨的蓝宝石湖，窗外是森林、雪山、钟楼、牧场——美得像走进一幅流动的水彩画。</p>
+                            <p>而真正震撼的，是那趟从格林德瓦出发的登山火车，把我们缓缓带上少女峰。</p>
+                            <p>当列车穿过山体，抵达3454米的欧洲最高火车站，门一打开，扑面而来的是雪与光的世界。脚下是厚实的积雪，头顶是湛蓝无暇的天空，我们在观景台上看着阿尔卑斯群峰从脚下铺开，风吹得每个人都不想说话，只想记住这画面。</p>
+                            <p>我们小团的节奏特别好——有时间在雪地尽情拍照，也有足够自由去冰宫探险、买明信片、发呆。没有催促，只有感受。</p>
+                            <p>下山之后，我们没有急着离开，而是去了「梦幻山坡」。那里太美了，美得像动画片：《悬崖上的木屋》《奶牛在草地上走》《牧场的花和风》，你听得到牛铃声，也看得见阳光洒在木质屋檐上闪闪发光。我们在这儿走了一段轻徒步，草地松软，风一吹就带着青草香。</p>
+                            <p>而晚上，我们回到湖边的那家酒店。窗外就是布里恩茨湖，湖水静得像一面镜子，远处雪山在月色中隐约泛光。我们坐在阳台喝热茶聊天，那一晚，没有人刷手机，没有人说"明天去哪"。</p>
+                            <p>有人说，旅行的意义是"短暂地过一种理想生活"。那一刻，我好像真的懂了这句话。</p>
+                        </div>
+                        <button class="sound-btn" data-sound="jungfrau">
+                            <i class="fas fa-play"></i> 听雪山风声
+                        </button>
+                        <button class="page-nav-arrow next-on-page" onclick="nextPage()"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- 第八页：米伦 -->
+                <div class="page" data-city="murren">
+                    <div class="page-background" style="background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2106&q=80')"></div>
+                    <div class="page-content">
+                        <button class="page-nav-arrow prev-on-page" onclick="prevPage()"><i class="fas fa-chevron-left"></i></button>
+                        <div class="city-header">
+                            <h2>🌸《我在米伦等你》</h2>
+                            <div class="city-info">
+                                <span class="coordinates">46.5591°N, 7.8926°E</span>
+                                <span class="elevation">海拔 1650m</span>
+                            </div>
+                        </div>
+                        <div class="city-text">
+                            <p>风吹花田，山说慢一点走</p>
+                            <p>在经历了少女峰的冰雪之后，我们来到了一个意想不到的地方——米伦。</p>
+                            <p>它就像是阿尔卑斯山系里藏着的一颗糖，静静地挂在悬崖边上。不通汽车，没有喧嚣，只能搭小火车或缆车到达。</p>
+                            <p>一出站，整个人就安静下来了。</p>
+                            <p>这里的街道不多，主街只有一条，木屋错落，牛铃声偶尔响起。窗台上的天竺葵，像认真打扮的小镇女孩，红艳艳地开着；远处的雪山倒映在屋顶上，像童话绘本的扉页。我们在镇上漫步，不用导航，也不会迷路，半小时就能走完整个村子。</p>
+                            <p>但最惊喜的，是那段轻徒步。</p>
+                            <p>我们从米伦走向吉梅尔瓦尔德，穿过一整片野花牧场。风吹得草海微微荡漾，阳光透过云层，在远处的少女峰上投下斑驳的光。沿途是安静的木栈道、草坡、奶牛、还有远远飘来的钟声。那一刻，我觉得自己不是在旅行，而是"住进了自然"。</p>
+                            <p>大家一路上都在拍照、走走停停，有人摘了两片小花夹在本子里，有人什么也没做，只是慢慢走，慢慢看。</p>
+                            <p>最后我们坐缆车下山，穿过云层时，有人突然说："我希望老了之后，也可以每年回来一次。"
+                            </p>
+                            <p>我没说话，但默默在心里点了头。</p>
+                            <p>如果说少女峰是一场震撼，那米伦，就是给心的深呼吸。</p>
+                        </div>
+                        <button class="sound-btn" data-sound="murren">
+                            <i class="fas fa-play"></i> 听牛铃声
+                        </button>
+                        <button class="page-nav-arrow next-on-page" onclick="nextPage()"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- 第九页：日内瓦 -->
+                <div class="page" data-city="geneva">
+                    <div class="page-background" style="background-image: url('https://images.unsplash.com/photo-1563841930606-67ad17ff2270?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2126&q=80')"></div>
+                    <div class="page-content">
+                        <button class="page-nav-arrow prev-on-page" onclick="prevPage()"><i class="fas fa-chevron-left"></i></button>
+                        <div class="city-header">
+                            <h2>🏰《我在日内瓦等你》</h2>
+                            <div class="city-info">
+                                <span class="coordinates">46.2044°N, 6.1432°E</span>
+                                <span class="elevation">海拔 373m</span>
+                            </div>
+                        </div>
+                        <div class="city-text">
+                            <p>在湖边的城堡，轻轻收住旅程的心跳</p>
+                            <p>从因特拉肯出发的这一天，我们一路下行，走出雪山，抵达日内瓦湖畔。</p>
+                            <p>这条线上的最后一站是——西庸城堡。</p>
+                            <p>它静静地坐落在湖边，就像湖水里长出来的一样。我们从车上远远看到它时，正值清晨，湖面起雾，整个城堡像浮在云里。那一刻，所有人都安静了。</p>
+                            <p>西庸城堡有种罕见的气质——它既不是华丽的，也不残破，而是一种「曾经发生过很多故事」的安静。我们在石阶和地牢之间穿行，脚步声在空旷的墙面上回荡。讲解器里说，这里曾囚禁过反抗宗教迫害的诗人。拜伦来过，还在柱子上留下了名字。</p>
+                            <p>但走出城堡，迎接我们的却是日内瓦湖一整面的阳光和鸽群。午餐我们在湖边吃了份热乎的芝士火锅，边吃边聊，好像大家都开始回味这一趟了。</p>
+                            <p>下午的自由活动是日内瓦老城和湖边公园，我们漫步到了花钟，也看到了那个从湖里直冲上天的大喷泉。有人去拍照，有人去买巧克力。我自己一个人去坐在湖边的长椅上，看着水面发呆——城市慢慢取代了山，但节奏没变，依然松弛。</p>
+                            <p>今天是离开瑞士前的最后一晚，我们住在日内瓦市区的酒店。没有雪山，但有灯火。窗外是城市的夜，安静而温柔。</p>
+                            <p>下一站，我们要搭TGV火车进入巴黎。一场"城市的浪漫大片"即将开始。</p>
+                        </div>
+                        <button class="sound-btn" data-sound="geneva">
+                            <i class="fas fa-play"></i> 听湖边风声
+                        </button>
+                        <button class="page-nav-arrow next-on-page" onclick="nextPage()"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- 第十页：巴黎 -->
+                <div class="page" data-city="paris">
+                    <div class="page-background" style="background-image: url('https://images.unsplash.com/photo-1502602898536-47ad22581b52?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80')"></div>
+                    <div class="page-content">
+                        <button class="page-nav-arrow prev-on-page" onclick="prevPage()"><i class="fas fa-chevron-left"></i></button>
+                        <div class="city-header">
+                            <h2>🌃《我在巴黎等你》</h2>
+                            <div class="city-info">
+                                <span class="coordinates">48.8566°N, 2.3522°E</span>
+                                <span class="elevation">海拔 35m</span>
+                            </div>
+                        </div>
+                        <div class="city-text">
+                            <p>浪漫的终章，写在黄昏的塞纳河畔</p>
+                            <p>我们旅行的最后一站，是巴黎。</p>
+                            <p>那天TGV驶入巴黎里昂车站，像一场电影的片头拉开了帷幕。窗外是熟悉的欧式街景，但空气不一样——比意大利更优雅，比瑞士更自由，像一位穿着长风衣的巴黎女子，走路都带着旋律。</p>
+                            <p>我们第一站是卢浮宫。熟悉的玻璃金字塔、蒙娜丽莎的微笑、胜利女神的身姿……都在告诉我们：欢迎来到"文明的橱窗"。我们带上耳机讲解器，一边看一边走，没有人催促，完全跟着自己的节奏，把博物馆变成一次静静的漫步。</p>
+                            <p>但最让我动容的，不是画作，而是走出卢浮宫，站在塞纳河边，阳光洒在水面上，桥与船、树影与灯光交织在一起。这城市真的会发光。</p>
+                            <p>那晚我们选择自费体验了一场游船晚宴。灯光亮起的那一刻，我们坐在玻璃窗边，身边是朋友，眼前是埃菲尔铁塔的灯光缓缓亮起。巴黎在夜里是金色的，河水在流，城市在讲故事，而我们只是静静地听着，像不想醒的梦。</p>
+                            <p>最后一天，我们去了凡尔赛宫、巴黎歌剧院，还在老佛爷百货买了纪念品。但这些都只是记录，真正留在心里的，是那几个轻描淡写的瞬间——</p>
+                            <p>在地铁里听到街头艺人的小提琴。</p>
+                            <p>在花神咖啡馆门口点一杯苦涩的美式。</p>
+                            <p>在香榭丽舍大街上和朋友开玩笑说："好像真的不想走了。"</p>
+                            <p>旅行的最后，大家不约而同都变得安静了。不是因为不舍，是因为心已经被填得很满。</p>
+                            <p>这趟13天的法意瑞旅程，就这样结束了。我们从雪山走到教堂，从湖边坐到咖啡馆，从日出一路看到黄昏。</p>
+                            <p>而我想说，如果有一天你也想换一种生活，就来巴黎。</p>
+                            <p>我在这里等你。</p>
+                        </div>
+                        <button class="sound-btn" data-sound="paris">
+                            <i class="fas fa-play"></i> 听塞纳河声
+                        </button>
+                        <button class="page-nav-arrow next-on-page" onclick="nextPage()"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- 第十一页：总结 -->
+                <div class="page" data-city="summary">
+                    <div class="page-background" style="background-image: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+                    <div class="page-content">
+                        <button class="page-nav-arrow prev-on-page" onclick="prevPage()"><i class="fas fa-chevron-left"></i></button>
+                        <div class="city-header">
+                            <h2>🌍《我在欧洲等你》</h2>
+                            <div class="city-info">
+                                <span class="coordinates">13天法意瑞之旅</span>
+                                <span class="elevation">3国10站</span>
+                            </div>
+                        </div>
+                        <div class="city-text">
+                            <p>13天走过法意瑞，原来这才是我想要的旅行</p>
+                            <p>这一趟旅程，从罗马进，巴黎出，13天，3国，10站。不是特种兵式的"打卡跑图"，也不是跟团游那种全程被安排，而是一次真正为我们"量身定制"的小团慢旅行。</p>
+                            <p>我们4个人，从陌生到熟络，一路有说有笑，有发呆有奔跑。住在市中心的酒店里，在湖边酒店的阳台吹风，在阿尔卑斯的雪山下吃路餐，在巴黎的船上看埃菲尔铁塔亮灯。</p>
+                            <p><strong>📍我们看过的风景：</strong></p>
+                            <p>• 罗马老城的石板路和清晨钟声<br>
+                            • 托斯卡纳山谷里的麦田和羊奶酪<br>
+                            • 佛罗伦萨钟楼上的橙色日落<br>
+                            • 威尼斯贡多拉划过水巷的浪漫<br>
+                            • 米兰大教堂屋顶的雕刻与秩序<br>
+                            • 卢塞恩桥下天鹅划水的优雅<br>
+                            • 少女峰顶被风吹得说不出话的震撼<br>
+                            • 米伦小镇徒步时一整片野花的惊喜<br>
+                            • 日内瓦湖畔城堡旁的长椅静坐<br>
+                            • 巴黎夜里在塞纳河边说"我不想回去"</p>
+                            <p><strong>📦我们选择了定制小团，不是为了"贵"，</strong><br>
+                            而是为了能用自己的节奏去体验真实的欧洲：<br>
+                            可以多停一会，也可以晚点出发；<br>
+                            可以边走边聊，也可以什么都不做。<br>
+                            更重要的是，有人安排好一切，让我们只负责"去感受"。</p>
+                            <p><strong>🛏 全程舒适住宿</strong>，booking评分都在8分以上<br>
+                            <strong>🚗 7座奔驰商务车</strong>，司导服务体贴入微<br>
+                            <strong>🧭 中文陪同讲解</strong>，全程自由不迷路<br>
+                            <strong>🥐 没有购物点</strong>，没有早起赶景点，一切从容<br>
+                            <strong>💬 想去哪去哪</strong>，想拍多久就拍多久，每一站都留了空白</p>
+                            <p>这趟旅行让我重新认识了"旅行"这两个字。</p>
+                            <p>它不该是攻略表格和时间节点的集合，而应该是——<br>
+                            一段段能被反复想起的记忆，一张张愿意打印出来挂在墙上的照片，一个个在深夜想起来会微笑的瞬间。</p>
+                            <p>如果你也在计划一次属于自己的欧洲旅行，<br>
+                            我建议你，试试这种4-6人的纯玩定制小团。<br>
+                            你会发现，自由、浪漫、细节感，其实都可以被安排得很好。</p>
+                            <p><strong>我走过的这10站，正在等你。</strong></p>
+                        </div>
+                        <button class="sound-btn" data-sound="summary">
+                            <i class="fas fa-play"></i> 听旅程回忆
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- 音频元素 -->
+    <audio id="backgroundMusic" loop>
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html> 

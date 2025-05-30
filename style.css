@@ -1,0 +1,928 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --venice-blue: #0096b3;
+    --tuscany-gold: #e6b412;
+    --milan-stone: #c4c0b4;
+    --lavender: #b5a6e8;
+    --text-dark: #2c2c2c;
+    --text-light: #ffffff;
+    --overlay-dark: rgba(0, 0, 0, 0.6);
+    --overlay-light: rgba(255, 255, 255, 0.9);
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* 固定导航栏 */
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background: var(--overlay-light); */
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--venice-blue);
+}
+
+.nav-cities {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.city-nav {
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    background: transparent;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.city-nav:hover {
+    background: var(--venice-blue);
+    color: var(--text-light);
+    transform: translateY(-2px);
+}
+
+.city-nav.active {
+    background: var(--tuscany-gold);
+    color: var(--text-light);
+}
+
+.sound-toggle {
+    background: none;
+    border: none;
+    color: var(--venice-blue);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sound-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* 封面页 */
+.hero-section {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%; /* 稍微放大以便缩放动画 */
+    height: 110%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: heroZoom 20s ease-in-out infinite;
+    transform-origin: center center;
+    left: -5%; /* 居中补偿 */
+    top: -5%;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg, 
+        rgba(0, 0, 0, 0.8) 0%, 
+        rgba(0, 0, 0, 0.4) 30%,
+        rgba(0, 150, 179, 0.3) 60%,
+        rgba(230, 180, 18, 0.2) 100%
+    );
+    z-index: -1;
+}
+
+/* 浮动粒子效果 */
+.floating-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: float 8s ease-in-out infinite;
+}
+
+.particle:nth-child(1) {
+    left: 10%;
+    top: 20%;
+    animation-delay: 0s;
+    animation-duration: 6s;
+}
+
+.particle:nth-child(2) {
+    left: 80%;
+    top: 30%;
+    animation-delay: 2s;
+    animation-duration: 8s;
+}
+
+.particle:nth-child(3) {
+    left: 60%;
+    top: 70%;
+    animation-delay: 4s;
+    animation-duration: 7s;
+}
+
+.particle:nth-child(4) {
+    left: 20%;
+    top: 80%;
+    animation-delay: 1s;
+    animation-duration: 9s;
+}
+
+.particle:nth-child(5) {
+    left: 90%;
+    top: 10%;
+    animation-delay: 3s;
+    animation-duration: 6s;
+}
+
+.particle:nth-child(6) {
+    left: 40%;
+    top: 40%;
+    animation-delay: 5s;
+    animation-duration: 8s;
+}
+
+.hero-content {
+    text-align: center;
+    color: var(--text-light);
+    z-index: 1;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    animation: titleGlow 3s ease-in-out infinite;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.stat-item {
+    text-align: center;
+    animation: statFadeIn 2s ease-out;
+}
+
+.stat-item:nth-child(1) { animation-delay: 0.5s; }
+.stat-item:nth-child(2) { animation-delay: 1s; }
+.stat-item:nth-child(3) { animation-delay: 1.5s; }
+
+.stat-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--tuscany-gold);
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    animation: numberPulse 4s ease-in-out infinite;
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.8;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.cta-button {
+    background: linear-gradient(45deg, var(--venice-blue), var(--tuscany-gold));
+    color: var(--text-light);
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    animation: buttonGlow 2s ease-in-out infinite;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(45deg, #00b3d6, #ffcc00);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text-light);
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* 地图页 */
+.map-section {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-dark);
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 3rem;
+}
+
+.route-map {
+    width: 100%;
+    height: auto;
+}
+
+.route-line {
+    animation: drawLine 3s ease-in-out;
+}
+
+.city-point {
+    fill: var(--venice-blue);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.city-point:hover {
+    fill: var(--tuscany-gold);
+    transform: scale(1.5);
+}
+
+.city-label {
+    font-size: 14px;
+    fill: var(--text-dark);
+    text-anchor: middle;
+    font-weight: 600;
+}
+
+.map-info {
+    max-width: 800px;
+    width: 100%;
+}
+
+.info-card {
+    background: var(--overlay-light);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.info-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--venice-blue);
+}
+
+.info-card ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.info-card li {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.info-card li:hover {
+    transform: translateX(10px);
+    color: var(--venice-blue);
+}
+
+/* 书本翻页区域 */
+.book-section {
+    min-height: 100vh;
+    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.book-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 700px;
+    position: relative;
+    overflow: hidden; /* Hide pages that slide out */
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.book {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    /* Smooth slide transition */
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* easeOutQuad for smooth sliding */
+    transform: translateX(100%); /* Default: pages start off-screen to the right */
+}
+
+/* Active page is visible in the center */
+.page.active {
+    transform: translateX(0%);
+    z-index: 2;
+}
+
+/* Turned pages are off-screen to the left */
+.page.turned {
+    transform: translateX(-100%);
+    z-index: 1;
+}
+
+/* Page sliding in from right */
+.page.slide-in-right {
+    transform: translateX(100%);
+}
+
+/* Page sliding out to left */
+.page.slide-out-left {
+    transform: translateX(-100%);
+}
+
+/* Page sliding in from left */
+.page.slide-in-left {
+    transform: translateX(-100%);
+}
+
+/* Page sliding out to right */
+.page.slide-out-right {
+    transform: translateX(100%);
+}
+
+.page-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.7);
+}
+
+.page-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--overlay-dark), rgba(0, 0, 0, 0.3));
+    color: var(--text-light);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.city-header {
+    margin-bottom: 1.5rem;
+}
+
+.city-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.3;
+}
+
+.city-info {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.coordinates, .elevation {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.city-text {
+    flex-grow: 1;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    max-height: 62vh;
+    overflow-y: auto;
+    padding-right: 1.2rem;
+    padding-bottom: 1rem;
+}
+
+.city-text p {
+    margin-bottom: 1.2rem;
+    display: block;
+    clear: both;
+}
+
+.city-text p:first-child {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--tuscany-gold);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.sound-btn, .next-page-btn, .journey-end-btn {
+    background: linear-gradient(45deg, var(--venice-blue), var(--tuscany-gold));
+    color: var(--text-light);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.5rem 1rem 0.5rem 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sound-btn:hover, .next-page-btn:hover, .journey-end-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* 新的页面内部导航箭头按钮样式 */
+.page-nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /*确保在内容之上*/
+}
+
+.page-nav-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.prev-on-page {
+    left: 15px;
+}
+
+.next-on-page {
+    right: 15px;
+}
+
+/* 动画效果 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(-5px) translateX(-50%);
+    }
+}
+
+@keyframes heroZoom {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px);
+        opacity: 0.6;
+    }
+    25% {
+        transform: translateY(-20px) translateX(10px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-40px) translateX(-10px);
+        opacity: 0.8;
+    }
+    75% {
+        transform: translateY(-20px) translateX(5px);
+        opacity: 1;
+    }
+}
+
+@keyframes titleGlow {
+    0%, 100% {
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+    50% {
+        text-shadow: 2px 2px 15px rgba(230, 180, 18, 0.5), 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+}
+
+@keyframes statFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes numberPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes buttonGlow {
+    0%, 100% {
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 8px 40px rgba(230, 180, 18, 0.4), 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@keyframes drawLine {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* 城市特效 */
+.page[data-city="rome"] .page-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 215, 0, 0.1), rgba(139, 69, 19, 0.1));
+}
+
+.page[data-city="venice"] .page-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 150, 179, 0.2), rgba(30, 144, 255, 0.1));
+    animation: waterRipple 4s ease-in-out infinite;
+}
+
+.page[data-city="jungfrau"] .page-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.8)"/></svg>') repeat;
+    animation: snowfall 8s linear infinite;
+}
+
+.page[data-city="paris"] .page-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+    animation: sparkle 3s ease-in-out infinite;
+}
+
+.page[data-city="summary"] .page-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(230, 180, 18, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 150, 179, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 50% 80%, rgba(255, 215, 0, 0.2) 0%, transparent 50%);
+    animation: summaryGlow 6s ease-in-out infinite;
+}
+
+.page[data-city="summary"] .page-content::before {
+    content: '💫';
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 2rem;
+    animation: floatAndFade 4s ease-in-out infinite;
+}
+
+.page[data-city="summary"] .page-content::after {
+    content: '✨';
+    position: absolute;
+    bottom: 15%;
+    left: 15%;
+    font-size: 1.5rem;
+    animation: floatAndFade 4s ease-in-out infinite 2s;
+}
+
+@keyframes waterRipple {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.4; }
+}
+
+@keyframes snowfall {
+    0% { transform: translateY(-100vh); }
+    100% { transform: translateY(100vh); }
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.3; }
+}
+
+@keyframes summaryGlow {
+    0%, 100% { 
+        opacity: 0.6; 
+        transform: scale(1);
+    }
+    50% { 
+        opacity: 0.8; 
+        transform: scale(1.05);
+    }
+}
+
+@keyframes floatAndFade {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg); 
+        opacity: 0.7; 
+    }
+    50% { 
+        transform: translateY(-20px) rotate(180deg); 
+        opacity: 1; 
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-cities {
+        display: none; /* Keep this for mobile nav */
+    }
+    
+    .fixed-nav {
+        padding: 0.5rem 1rem;
+    }
+    
+    .nav-logo {
+        font-size: 1.2rem;
+    }
+    
+    .book-container {
+        height: 80vh;
+    }
+    
+    .page-content {
+        padding: 1.5rem;
+    }
+    
+    .city-header h2 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    
+    .city-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        max-height: 50vh; /* Adjusted for on-page arrows */
+    }
+    
+    .city-text p {
+        margin-bottom: 1rem;
+    }
+    
+    .city-text p:first-child {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .city-info {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    /* Style for new on-page arrows on mobile */
+    .page-nav-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+    .prev-on-page {
+        left: 10px;
+    }
+    .next-on-page {
+        right: 10px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .info-card ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .page-content {
+        padding: 1.5rem 1rem;
+    }
+    
+    .city-header h2 {
+        font-size: 1.8rem; 
+    }
+    
+    /* Removed .sound-btn, .next-page-btn, .journey-end-btn media query */
+    
+    /* Removed .page-controls media query */
+    
+    /* Removed .postcard-btn media query */
+}
+
+/* 打印样式 */
+@media print {
+    .fixed-nav, .page-nav-arrow, .sound-btn { /* Updated to include .page-nav-arrow */
+        display: none !important;
+    }
+    
+    .page {
+        position: static;
+        width: 100%;
+        height: auto;
+        page-break-after: always;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    
+    .page-content {
+        position: static;
+        background: none;
+        color: var(--text-dark);
+        padding: 2rem;
+    }
+    
+    .city-header h2 {
+        color: var(--text-dark);
+        text-shadow: none;
+    }
+}
+
+.page[data-city="geneva"] .city-text {
+    line-height: 1.75;
+} 
